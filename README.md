@@ -8,8 +8,9 @@ En busqueda de una web para la creacion de una lista de regalos, nos encontramos
 
 En este proyecto queremos desarrollar una web que nos permita:
 
-**Registrarnos como usuario.**
-..::Como usuario registrado::..
+*Registrarnos como usuario.
+
+**Como usuario registrado**
   *Crear un evento(baby shower, matrimonio, quince años).
   *Crear una lista de deseos
     -Poder agregar links directo del producto y mediante scrapy obtener precio, foto de referencia y nombre.
