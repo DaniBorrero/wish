@@ -1,0 +1,47 @@
+<% if current_user %>
+<!--Usuario logueado-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">ListWish</a>
+        </li>        
+      </ul>
+      <form class="navbar-nav ">
+        <%= link_to  "Mi Perfil", edit_user_registration_path, class: "nav-item nav-link" %>
+        <%= link_to  "Cerrar Session", destroy_user_session_path, method: :delete, class: "nav-item nav-link" %>
+      </form>
+    </div>
+  </div>
+</nav>
+<%else%>
+<!--Usuario no logueado-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">ListWish</a>
+        </li>        
+      </ul>
+      <form class="navbar-nav ">
+        <%= link_to  "Registrarse", new_user_registration_path, class: "nav-item nav-link" %>
+        <%= link_to  "Iniciar seccion", new_user_session_path, class: "nav-item nav-link" %>
+      </form>
+    </div>
+  </div>
+</nav>
+<%end%>
+
+<!--
+Por hacer:
+-Agregar inconos Favicon
+-Cambiar Navbar cuando usuario este logueado
+-->
