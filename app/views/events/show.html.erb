@@ -6,3 +6,5 @@
     <%= link_to 'Editar', edit_event_path(@event),class: "btn btn-info" %>    
   </div>
 </div>
+<%=link_to 'Crear lista de deseo del evento', {:controller => "lists", :action => "new", :event_id => @event.id }%>
+<% link_to  "crear lista", new_list_path(@list) %>
