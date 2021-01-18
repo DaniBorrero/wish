@@ -1,2 +1,8 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="text-center">
+  <p id="notice"><%= notice %></p>
+  <div>
+    <h5><%= @event.name %></h5>
+    <p><%= @event.description %></p=>            
+    <%= link_to 'Editar', edit_event_path(@event),class: "btn btn-info" %>    
+  </div>
+</div>
