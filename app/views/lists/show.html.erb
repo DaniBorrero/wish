@@ -8,3 +8,4 @@
     <%= link_to 'Editar', edit_list_path(@list),class: "btn btn-info" %>    
   </div>
 </div>
+<%=link_to 'Agregar items a la lista', {:controller => "items", :action => "new", :list_id => @list.id }%>

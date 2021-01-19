@@ -1,7 +1,8 @@
-<%= form_with(model: item, local: true) do |form| %><% if item.errors.any? %>
+<%= form_with(model: item, local: true) do |form| %>
+<% if item.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
-<ul>
+  <ul>
     <% item.errors.full_messages.each do |message| %>
     <li><%= message %></li>
     <% end %>
@@ -15,6 +16,8 @@
     <%= form.text_field :name, id: :product_name %>
   </div>
 </div>
+
+<%= hidden_field_tag :list_id, params[:list_id] %>
 
 
 <div class="actions">

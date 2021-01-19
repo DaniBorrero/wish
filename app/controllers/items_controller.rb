@@ -4,8 +4,8 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
-  def show
-    @item = Item.find(params[:id])
+  def show      
+      @item = Item.find(params[:id])   
   end
 
   def new
@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
 
   def create 
     @item = Item.new(item_params)
-    
+    @item.list_id = params[:list_id]
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
@@ -59,6 +59,6 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:name, :price, :url, :list_id)  
+    params.require(:item).permit(:name, :list_id)
   end
 end
