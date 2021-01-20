@@ -1,8 +1,54 @@
-<div class="container">
-  <h1>TE AYUDAMOS A CREAR TU LISTA DE DESEOS!</h1>
+<div class="container d-flex justify-content-center my-5">
+  <%= image_tag  "title.png" %>
 </div>
-<h1>Hacer perfiles editables usando </h1>
 
-<!--consultar base de datos remota.
-Limpiar github-->
 
+<div class="container my-3">
+  <div class="container my-3">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner bg-dark">
+        <div class="carousel-item active">
+          <%= image_tag  "babe-2972221_1280.jpg", class: 'd-block w-100 fixed-height' %>          
+          <div id="lol" class="carousel-caption d-none d-md-block ">
+            <strong>
+              <h4>PertmutApp</h4>
+              <p>¡En <b>PertmutApp</b> te ayudamos a encontrar eso que tanto quieres!.</p>
+            </strong>
+          </div>
+        </div>
+        <div class="carousel-item bg-dark">
+          <%= image_tag  "baby-784608_1280.jpg", class: 'd-block w-100 fixed-height' %>          
+          <div class="carousel-caption d-none d-md-block ">
+            <strong>
+              <h4>¿No lo necesitas?</h4>
+              <p>¡Anuncia tu producto y cambialo por otro! </p>
+            </strong>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag  "baby-784609_1280.jpg", class: 'd-block w-100 fixed-height' %>          
+          <div class="carousel-caption d-none d-md-block ">
+            <strong>
+              <h4>Busca lo que necesitas</h4>
+              <p>¡No hay forma de perder! ¡Ganamos todos!.</p>
+            </strong>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+  </div>
+
+</div>
