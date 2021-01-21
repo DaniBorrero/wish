@@ -1,10 +1,15 @@
-<div class="text-center">
+<div class="text-center my-5">
   <p id="notice"><%= notice %></p>
-  <div>
-    <h5><%= @event.name %></h5>
-    <p><%= @event.description %></p=>            
-    <%= link_to 'Editar', edit_event_path(@event),class: "btn btn-info" %>    
+  <div class="card">
+    <h5 class="card-header">Evento</h5>
+    <div class="card-body">
+      <h5 class="card-title"><%= @event.name%></h5>
+      <h6>Descripcion:</h6>
+      <p class="card-text"><%=@event.description%></p>
+      <%= link_to 'Editar', edit_event_path(@event),class: "btn btn-outline-primary" %>
+      <%= link_to 'Volver', events_path,class: "btn btn-outline-success" %>
+      <%=link_to 'Agregar una lista al Evento', {:controller => "lists", :action => "new", :event_id => @event.id }, class:"btn btn-outline-success m-4"%>  
+    </div>
   </div>
+  
 </div>
-<%=link_to 'Crear lista de deseo del evento', {:controller => "lists", :action => "new", :event_id => @event.id }%>
-
