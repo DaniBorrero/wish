@@ -3,6 +3,8 @@
   <div>   
     <h5><%= @item.name %></h5>      
     <h5><%= @item.list_id %></h5>
+    <h5><%= @item.price %></h5>
+    <img src="<%= @item.url%>">
     <%= link_to 'Editar', edit_item_path(@item),class: "btn btn-info" %>    
   </div>
 </div>

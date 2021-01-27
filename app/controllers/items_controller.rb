@@ -1,5 +1,9 @@
+#require_relative 'scrap'
+require 'nokogiri'
+require 'open-uri'
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, onyl: [:edit, :update, :new, :create, :show]
+  before_action :authenticate_user!, onyl: [:edit, :update, :new, :create, :show]  
+  
   def index
     @items = Item.all
   end
@@ -19,14 +23,17 @@ class ItemsController < ApplicationController
   def create 
     @item = Item.new(item_params)
     @item.list_id = params[:list_id]
+    url, price, name =  scrap_page('https://www.falabella.com/falabella-cl/product/8406240/500-Zapatilla-Urbana-Mujer/8406270')
+    @item.url = url
+    @item.price = price
+    @item.name = name
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
         format.json { render :show, status: :created, location: @item }
       else
         format.html { render :new }
-        format.json { render json: @item.errors, status: :unprocessable_entity }
-        
+        format.json { render json: @item.errors, status: :unprocessable_entity }        
       end
     end
   end
@@ -60,5 +67,25 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:name, :list_id)
+  end
+  #
+  def scrap_page(url)
+    image_url = ''
+    price = 5.2
+    name = ''
+    html = open(url).read
+    doc = Nokogiri::HTML(html)
+    doc.search('img.jsx-2487856160').map do |element|
+      image_url = element.attr('src')
+    end
+    
+    doc.search('.copy12').map do |element|
+      price = element.inner_text.tr('$ .','').to_f
+    end
+  
+    doc.search('.product-name').map do |element|
+      name =  element.inner_text
+    end
+    return image_url, price, name
   end
 end

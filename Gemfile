@@ -25,6 +25,11 @@ gem 'jbuilder', '~> 2.7'
 # devise
 gem 'devise'
 
+#Gem scraping
+gem 'mechanize'
+gem 'csv'
+gem 'pry-byebug'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
