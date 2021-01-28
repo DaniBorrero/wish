@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
   def create 
     @item = Item.new(item_params)
     @item.list_id = params[:list_id]
-    url, price, name =  scrap_page('https://www.falabella.com/falabella-cl/product/8406240/500-Zapatilla-Urbana-Mujer/8406270')
+    url, price, name =  scrap_page(@item.name)
     @item.url = url
     @item.price = price
     @item.name = name
