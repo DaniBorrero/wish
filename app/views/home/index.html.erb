@@ -1,8 +1,7 @@
+<%if user_signed_in? %>
 <div class="container d-flex justify-content-center my-5">
   <%= image_tag  "title.png" %>
 </div>
-
-
 <div class="container my-3">
   <div class="container my-3">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -13,29 +12,29 @@
       </ol>
       <div class="carousel-inner bg-dark">
         <div class="carousel-item active">
-          <%= image_tag  "babe-2972221_1280.jpg", class: 'd-block w-100 fixed-height' %>          
+          <%= image_tag  "babe-2972221_1280.jpg", class: 'd-block w-100 fixed-height' %>
           <div id="lol" class="carousel-caption d-none d-md-block ">
             <strong>
-              <h4>PertmutApp</h4>
-              <p>¡En <b>PertmutApp</b> te ayudamos a encontrar eso que tanto quieres!.</p>
+              <h4>WishList</h4>
+              <p>¡En <b>WhisList</b> te ayudamos en tu dia especial.</p>
             </strong>
           </div>
         </div>
         <div class="carousel-item bg-dark">
-          <%= image_tag  "baby-784608_1280.jpg", class: 'd-block w-100 fixed-height' %>          
+          <%= image_tag  "black-and-white_1280.jpg", class: 'd-block w-100 fixed-height' %>
           <div class="carousel-caption d-none d-md-block ">
             <strong>
-              <h4>¿No lo necesitas?</h4>
-              <p>¡Anuncia tu producto y cambialo por otro! </p>
+              <h4>En WishList</h4>
+              <p>Lo hacemos facil para ti.</p>
             </strong>
           </div>
         </div>
         <div class="carousel-item">
-          <%= image_tag  "baby-784609_1280.jpg", class: 'd-block w-100 fixed-height' %>          
+          <%= image_tag  "birthday.jpg", class: 'd-block w-100 fixed-height' %>
           <div class="carousel-caption d-none d-md-block ">
             <strong>
-              <h4>Busca lo que necesitas</h4>
-              <p>¡No hay forma de perder! ¡Ganamos todos!.</p>
+              <h4>Varios Retail</h4>
+              <p>Trabajamos con Fallabella (proximamente más!)</p>
             </strong>
           </div>
         </div>
@@ -50,5 +49,59 @@
       </a>
     </div>
   </div>
-
 </div>
+<%else%>
+<div>
+  <div class="container d-flex justify-content-center my-5">
+    <%= image_tag  "title.png" %>
+  </div>
+  <div class="container my-3">
+    <div class="container my-3">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner bg-dark">
+          <div class="carousel-item active">
+            <%= image_tag  "babe-2972221_1280.jpg", class: 'd-block w-100 fixed-height' %>
+            <div id="lol" class="carousel-caption d-none d-md-block ">
+              <strong>
+                <h4>WishList</h4>
+                <p>En la actualidad unatarea facil se puede complicar mas de lo imaginado, es por eso que nace WishList.</p>
+              </strong>
+            </div>
+          </div>
+          <div class="carousel-item bg-dark">
+            <%= image_tag  "black-and-white_1280.jpg", class: 'd-block w-100 fixed-height' %>
+            <div class="carousel-caption d-none d-md-block ">
+              <strong>
+                <h4>WishList</h4>
+                <p>Con la finalidad de ayudarte WishList te permite agregar articulos de diferentes Retails en una sola web</p>
+              </strong>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag  "birthday.jpg", class: 'd-block w-100 fixed-height' %>
+            <div class="carousel-caption d-none d-md-block ">
+              <strong>
+                <h4>WishList</h4>
+                <p> presentadolos de una forma elegante y ordenada.</p>
+              </strong>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<%end%>
