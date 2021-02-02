@@ -33,6 +33,13 @@ gem 'pry-byebug'
 #Authenticate
 gem 'omniauth-facebook'
 
+#ActiveAdmin
+gem 'activeadmin'
+# Plus integrations with:
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
