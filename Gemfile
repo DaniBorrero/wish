@@ -33,6 +33,10 @@ gem 'pry-byebug'
 #Authenticate
 gem 'omniauth-facebook'
 
+#gem ChartKick
+gem 'chartkick'
+gem 'groupdate'
+
 #ActiveAdmin
 gem 'activeadmin'
 # Plus integrations with:
