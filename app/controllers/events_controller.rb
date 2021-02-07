@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, onyl: [:edit, :update, :new, :create, :show]
+  before_action :authenticate_user!, onyl: [:edit, :update, :new, :create]
   def index
     @events = Event.all
   end

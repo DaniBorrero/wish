@@ -1,9 +1,7 @@
-
-<%= form_with(model: list, local: true) do |form| %>
+<%= form_with(model: list, local: false) do |form| %>
 <% if list.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(list.errors.count, "error") %> prohibited this list from being saved:</h2>
-
   <ul>
     <% list.errors.full_messages.each do |message| %>
     <li><%= message %></li>
@@ -11,24 +9,35 @@
   </ul>
 </div>
 <% end %>
-
-<div class="form-group my-5">
-  <%= form.label :name, "Nombre de la lista de deseos", class: "col-lg-2 control-label" %>
-  <div class="col-lg-10">
-    <%= form.text_field :name, id: :product_name %>
-  </div>
-</div>
-
-<div class="form-group my-5">
-  <%= form.label :description, "Descripcion", class: "col-lg-2 control-label" %>
-  <div class="col-lg-10">
-    <%= form.text_field :description, id: :product_name %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="col-sm">
+        <div class="form-group my-3">
+          <%= form.label :name, "Nombre", class: "col-lg-2 control-label" %>
+          <div class="col-lg-10">
+            <%= form.text_field :name, id: :product_name, class:"form-control my-2"%>
+          </div>
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <%= form.label :description, "Descripcion", class: "col-lg-2 control-label my-2" %>
+        <div class="col-lg-10">
+          <%= form.text_area :description, id: :product_name, class:"form-control" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <%= image_tag  "title.png" %>
+    </div>
   </div>
 </div>
 
 <%= hidden_field_tag :event_id, params[:event_id] %>
 
+
 <div class="actions">
-  <%= form.submit %>
+  <%= form.submit "Crear Lista", class:'btn btn-success'%>
 </div>
+<%= link_to "Volver", events_path %>
 <% end %>

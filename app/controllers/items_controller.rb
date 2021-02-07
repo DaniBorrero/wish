@@ -2,7 +2,7 @@
 require 'nokogiri'
 require 'open-uri'
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, onyl: [:edit, :update, :new, :create, :show]  
+  before_action :authenticate_user!, onyl: [:edit, :update, :new, :create]  
   
   def index
     @items = Item.all
@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
-        format.json { render :show, status: :created, location: @item }
+        format.json { render :show, status: :created, location: @list }
       else
         format.html { render :new }
         format.json { render json: @item.errors, status: :unprocessable_entity }        

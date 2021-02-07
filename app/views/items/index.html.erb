@@ -10,10 +10,10 @@
   </thead>
 
   <tbody>
-    <% @items.each do |item| %>
-      <%if item.list.event.user.id == current_user.id%> </br>
+    <% @items.each do |item| %>      
         <tr>
           <td><%=item.name%></td>          
+          <%if item.list.event.user.id == current_user.id%> </br>
           <td><%= link_to 'Show', item %></td>
           <td><%= link_to 'Edit', edit_item_path(item) %></td>
           <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

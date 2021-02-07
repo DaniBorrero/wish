@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :authenticate_user!, onyl: [:edit, :update, :new, :create, :show]
+  before_action :authenticate_user!, onyl: [:edit, :update, :new, :create]
   def index
     @lists = List.all
   end
@@ -8,7 +8,7 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
   end
 
-  def new
+  def new    
     @list = List.new    
   end
 
@@ -22,7 +22,7 @@ class ListsController < ApplicationController
     respond_to do |format|
       if @list.save
         format.html { redirect_to @list, notice: 'list was successfully created.' }
-        format.json { render :show, status: :created, location: @list }
+        format.json { render :index, status: :created, location: @list }
       else
         format.html { render :new }
         format.json { render json: @list.errors, status: :unprocessable_entity }
