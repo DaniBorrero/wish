@@ -13,11 +13,14 @@
  
  *= require_self
  */
-
- body {
-  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+ body{ 
+  background-color: #c7c7c7;
+  display:flex; 
+  flex-direction:column; 
 }
-
+h3{
+  font-family: "Times New Roman", Times, serif;
+}
 #button-addon1 {
   color: #ffc371;
 }
@@ -40,10 +43,7 @@ i {
   opacity:0.9!important;
 }
 
-body{ 
-  display:flex; 
-  flex-direction:column; 
-}
+
 
 footer{
   min-height:50px;

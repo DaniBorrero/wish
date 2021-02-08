@@ -11,6 +11,7 @@
       <td class="border"><strong>Descripcion:</strong> <%= @list.description %></td>
       <% if current_user.id == @list.event.user.id %>
         <td class="border"><%= link_to 'Editar', edit_list_path(@list.id),class: "btn btn-info" %></td>
+        <td class="border"><%= link_to 'Administrar items', items_path(@list.id),class: "btn btn-info" %></td>
         <td class="border"><%=link_to 'Agregar items a la lista', {:controller => "items", :action => "new", :list_id => @list.id }, class: "btn btn-outline-success"%></td>        
       <%end%>
     </tr>    
@@ -21,13 +22,14 @@
 <div class="container">
   <div class="row">    
       <% @list.items.each do |i| %>
-      <div class="col-sm">
+      <div class="col-sm my-3">
         <div class="card" style="width: 18rem;">
-          <img src=<%= i.url%> class="card-img-top" alt="...">
+          <img src=<%= i.img_url%> class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"><%= i.name %></h5>
             <p class="card-text"><%= i.price %></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href=<%= i.url%> class="btn btn-primary" target="_blank">Ver en tienda</a>
+            <a href="#" class="btn btn-primary">Reservar</a>            
           </div>
         </div>
       </div>

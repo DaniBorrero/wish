@@ -1,107 +1,113 @@
-<%if user_signed_in? %>
 <div class="container d-flex justify-content-center my-5">
   <%= image_tag  "title.png" %>
 </div>
-<div class="container my-3">
-  <div class="container my-3">
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner bg-dark">
-        <div class="carousel-item active">
-          <%= image_tag  "babe-2972221_1280.jpg", class: 'd-block w-100 fixed-height' %>
-          <div id="lol" class="carousel-caption d-none d-md-block ">
-            <strong>
-              <h4>WishList</h4>
-              <p>¡En <b>WhisList</b> te ayudamos en tu dia especial.</p>
-            </strong>
-          </div>
-        </div>
-        <div class="carousel-item bg-dark">
-          <%= image_tag  "black-and-white_1280.jpg", class: 'd-block w-100 fixed-height' %>
-          <div class="carousel-caption d-none d-md-block ">
-            <strong>
-              <h4>En WishList</h4>
-              <p>Lo hacemos facil para ti.</p>
-            </strong>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <%= image_tag  "birthday.jpg", class: 'd-block w-100 fixed-height' %>
-          <div class="carousel-caption d-none d-md-block ">
-            <strong>
-              <h4>Varios Retail</h4>
-              <p>Trabajamos con Fallabella (proximamente más!)</p>
-            </strong>
+<div class="container">
+  <div class="row ">
+    <div class="col-sm my-4">
+      <h3 class="align-middle my-5">Welcome a WishList, el sitio donde encontraras todo lo que necesitas para relizar tu lista de deseos para tu matrimonio, baby shower, divorcio o cualquier otra celebracion.</h3>
+    </div>
+    <div class="col-sm">
+      <%if user_signed_in? %>
+      <div class="container my-3">
+        <div class="container my-3">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner bg-dark">
+              <div class="carousel-item active">
+                <%= image_tag  "babe-2972221_1280.jpg", class: 'd-block w-100 fixed-height' %>
+                <div id="lol" class="carousel-caption d-none d-md-block ">
+                  <strong>
+                    <h4>WishList</h4>
+                    <p>¡En <b>WhisList</b> te ayudamos en tu dia especial.</p>
+                  </strong>
+                </div>
+              </div>
+              <div class="carousel-item bg-dark">
+                <%= image_tag  "black-and-white_1280.jpg", class: 'd-block w-100 fixed-height' %>
+                <div class="carousel-caption d-none d-md-block ">
+                  <strong>
+                    <h4>En WishList</h4>
+                    <p>Lo hacemos facil para ti.</p>
+                  </strong>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <%= image_tag  "birthday.jpg", class: 'd-block w-100 fixed-height' %>
+                <div class="carousel-caption d-none d-md-block ">
+                  <strong>
+                    <h4>Varios Retail</h4>
+                    <p>Trabajamos con Fallabella (proximamente más!)</p>
+                  </strong>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </a>
-    </div>
-  </div>
-</div>
-<%else%>
-<div>
-  <div class="container d-flex justify-content-center my-5">
-    <%= image_tag  "title.png" %>
-  </div>
-  <div class="container my-3">
-    <div class="container my-3">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-          <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner bg-dark">
-          <div class="carousel-item active">
-            <%= image_tag  "babe-2972221_1280.jpg", class: 'd-block w-100 fixed-height' %>
-            <div id="lol" class="carousel-caption d-none d-md-block ">
-              <strong>
-                <h4>WishList</h4>
-                <p>En la actualidad unatarea facil se puede complicar mas de lo imaginado, es por eso que nace WishList.</p>
-              </strong>
-            </div>
-          </div>
-          <div class="carousel-item bg-dark">
-            <%= image_tag  "black-and-white_1280.jpg", class: 'd-block w-100 fixed-height' %>
-            <div class="carousel-caption d-none d-md-block ">
-              <strong>
-                <h4>WishList</h4>
-                <p>Con la finalidad de ayudarte WishList te permite agregar articulos de diferentes Retails en una sola web</p>
-              </strong>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <%= image_tag  "birthday.jpg", class: 'd-block w-100 fixed-height' %>
-            <div class="carousel-caption d-none d-md-block ">
-              <strong>
-                <h4>WishList</h4>
-                <p> presentadolos de una forma elegante y ordenada.</p>
-              </strong>
+      <%else%>
+      <div>       
+        <div class="container my-3">
+          <div class="container my-3">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner bg-dark">
+                <div class="carousel-item active">
+                  <%= image_tag  "babe-2972221_1280.jpg", class: 'd-block w-100 fixed-height' %>
+                  <div id="lol" class="carousel-caption d-none d-md-block ">
+                    <strong>
+                      <h4>WishList</h4>
+                      <p>En la actualidad unatarea facil se puede complicar mas de lo imaginado, es por eso que nace WishList.</p>
+                    </strong>
+                  </div>
+                </div>
+                <div class="carousel-item bg-dark">
+                  <%= image_tag  "black-and-white_1280.jpg", class: 'd-block w-100 fixed-height' %>
+                  <div class="carousel-caption d-none d-md-block ">
+                    <strong>
+                      <h4>WishList</h4>
+                      <p>Con la finalidad de ayudarte WishList te permite agregar articulos de diferentes Retails en una sola web</p>
+                    </strong>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag  "birthday.jpg", class: 'd-block w-100 fixed-height' %>
+                  <div class="carousel-caption d-none d-md-block ">
+                    <strong>
+                      <h4>WishList</h4>
+                      <p> presentadolos de una forma elegante y ordenada.</p>
+                    </strong>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </a>
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </a>
       </div>
-    </div>
+      <%end%>
+    </div>    
   </div>
 </div>
-<%end%>
